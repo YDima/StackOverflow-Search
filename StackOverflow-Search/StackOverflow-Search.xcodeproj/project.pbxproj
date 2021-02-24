@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5A64FB225E67CC4009A61A0 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FB125E67CC4009A61A0 /* EndPointType.swift */; };
+		E5A64FB625E67D49009A61A0 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FB525E67D49009A61A0 /* HTTPMethod.swift */; };
+		E5A64FB925E67D92009A61A0 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FB825E67D92009A61A0 /* HTTPTask.swift */; };
+		E5A64FBD25E67F7C009A61A0 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FBC25E67F7C009A61A0 /* ParameterEncoding.swift */; };
+		E5A64FC125E68088009A61A0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FC025E68088009A61A0 /* NetworkError.swift */; };
+		E5A64FC425E68108009A61A0 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FC325E68108009A61A0 /* URLParameterEncoder.swift */; };
+		E5A64FC725E68506009A61A0 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FC625E68506009A61A0 /* JSONParameterEncoder.swift */; };
+		E5A64FCA25E6D07B009A61A0 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FC925E6D07B009A61A0 /* NetworkRouter.swift */; };
+		E5A64FCD25E6D146009A61A0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FCC25E6D146009A61A0 /* Router.swift */; };
+		E5A64FD325E6D960009A61A0 /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FD225E6D960009A61A0 /* APIEndPoint.swift */; };
+		E5A64FD725E6E323009A61A0 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FD625E6E323009A61A0 /* APIResponse.swift */; };
+		E5A64FDA25E6E436009A61A0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FD925E6E436009A61A0 /* Question.swift */; };
+		E5A64FDD25E6EB31009A61A0 /* DefaultNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FDC25E6EB31009A61A0 /* DefaultNetworkManager.swift */; };
+		E5A64FE025E6EB96009A61A0 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FDF25E6EB96009A61A0 /* NetworkResponse.swift */; };
+		E5A64FE425E70888009A61A0 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FE325E70888009A61A0 /* Answer.swift */; };
+		E5A64FE725E70A7C009A61A0 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A64FE625E70A7C009A61A0 /* Owner.swift */; };
 		E5FD83FF25E403980072C2A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD83FE25E403980072C2A1 /* AppDelegate.swift */; };
 		E5FD840125E403980072C2A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD840025E403980072C2A1 /* SceneDelegate.swift */; };
 		E5FD840325E403980072C2A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD840225E403980072C2A1 /* ViewController.swift */; };
@@ -17,6 +33,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5A64FB125E67CC4009A61A0 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		E5A64FB525E67D49009A61A0 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		E5A64FB825E67D92009A61A0 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		E5A64FBC25E67F7C009A61A0 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		E5A64FC025E68088009A61A0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E5A64FC325E68108009A61A0 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		E5A64FC625E68506009A61A0 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		E5A64FC925E6D07B009A61A0 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		E5A64FCC25E6D146009A61A0 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E5A64FD225E6D960009A61A0 /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
+		E5A64FD625E6E323009A61A0 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		E5A64FD925E6E436009A61A0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		E5A64FDC25E6EB31009A61A0 /* DefaultNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkManager.swift; sourceTree = "<group>"; };
+		E5A64FDF25E6EB96009A61A0 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		E5A64FE325E70888009A61A0 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		E5A64FE625E70A7C009A61A0 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		E5FD83FB25E403980072C2A1 /* StackOverflow-Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StackOverflow-Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FD83FE25E403980072C2A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5FD840025E403980072C2A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +71,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5A64FAD25E67C6D009A61A0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E5A64FBB25E67F5E009A61A0 /* Encoding */,
+				E5A64FB025E67C94009A61A0 /* Manager */,
+				E5A64FAF25E67C88009A61A0 /* Service */,
+				E5A64FAE25E67C7C009A61A0 /* EndPoint */,
+				E5A64FC025E68088009A61A0 /* NetworkError.swift */,
+				E5A64FDF25E6EB96009A61A0 /* NetworkResponse.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E5A64FAE25E67C7C009A61A0 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				E5A64FB125E67CC4009A61A0 /* EndPointType.swift */,
+				E5A64FD225E6D960009A61A0 /* APIEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		E5A64FAF25E67C88009A61A0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E5A64FB525E67D49009A61A0 /* HTTPMethod.swift */,
+				E5A64FB825E67D92009A61A0 /* HTTPTask.swift */,
+				E5A64FC925E6D07B009A61A0 /* NetworkRouter.swift */,
+				E5A64FCC25E6D146009A61A0 /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E5A64FB025E67C94009A61A0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E5A64FDC25E6EB31009A61A0 /* DefaultNetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E5A64FBB25E67F5E009A61A0 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				E5A64FBC25E67F7C009A61A0 /* ParameterEncoding.swift */,
+				E5A64FC325E68108009A61A0 /* URLParameterEncoder.swift */,
+				E5A64FC625E68506009A61A0 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		E5A64FD125E6D8FF009A61A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5A64FD625E6E323009A61A0 /* APIResponse.swift */,
+				E5A64FD925E6E436009A61A0 /* Question.swift */,
+				E5A64FE325E70888009A61A0 /* Answer.swift */,
+				E5A64FE625E70A7C009A61A0 /* Owner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E5FD83F225E403980072C2A1 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +152,8 @@
 		E5FD83FD25E403980072C2A1 /* StackOverflow-Search */ = {
 			isa = PBXGroup;
 			children = (
+				E5A64FD125E6D8FF009A61A0 /* Model */,
+				E5A64FAD25E67C6D009A61A0 /* Networking */,
 				E5FD83FE25E403980072C2A1 /* AppDelegate.swift */,
 				E5FD840025E403980072C2A1 /* SceneDelegate.swift */,
 				E5FD840225E403980072C2A1 /* ViewController.swift */,
@@ -140,10 +236,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5A64FB925E67D92009A61A0 /* HTTPTask.swift in Sources */,
+				E5A64FDA25E6E436009A61A0 /* Question.swift in Sources */,
 				E5FD840925E403980072C2A1 /* StackOverflow_Search.xcdatamodeld in Sources */,
+				E5A64FBD25E67F7C009A61A0 /* ParameterEncoding.swift in Sources */,
 				E5FD840325E403980072C2A1 /* ViewController.swift in Sources */,
+				E5A64FE025E6EB96009A61A0 /* NetworkResponse.swift in Sources */,
+				E5A64FC725E68506009A61A0 /* JSONParameterEncoder.swift in Sources */,
+				E5A64FCA25E6D07B009A61A0 /* NetworkRouter.swift in Sources */,
+				E5A64FB625E67D49009A61A0 /* HTTPMethod.swift in Sources */,
 				E5FD83FF25E403980072C2A1 /* AppDelegate.swift in Sources */,
+				E5A64FC125E68088009A61A0 /* NetworkError.swift in Sources */,
+				E5A64FDD25E6EB31009A61A0 /* DefaultNetworkManager.swift in Sources */,
+				E5A64FB225E67CC4009A61A0 /* EndPointType.swift in Sources */,
+				E5A64FE725E70A7C009A61A0 /* Owner.swift in Sources */,
+				E5A64FD725E6E323009A61A0 /* APIResponse.swift in Sources */,
+				E5A64FE425E70888009A61A0 /* Answer.swift in Sources */,
+				E5A64FC425E68108009A61A0 /* URLParameterEncoder.swift in Sources */,
 				E5FD840125E403980072C2A1 /* SceneDelegate.swift in Sources */,
+				E5A64FCD25E6D146009A61A0 /* Router.swift in Sources */,
+				E5A64FD325E6D960009A61A0 /* APIEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
