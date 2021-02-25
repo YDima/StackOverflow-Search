@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-enum NetworkResponse:String {
+enum NetworkResponse: String {
     case success
     case authenticationError = "You need to be authenticated first."
     case badRequest = "Bad request"
@@ -18,7 +17,7 @@ enum NetworkResponse:String {
     case unableToDecode = "Сould not decode the response."
 }
 
-enum Result<String>{
+enum Result<String> {
     case success
     case failure(String)
 }

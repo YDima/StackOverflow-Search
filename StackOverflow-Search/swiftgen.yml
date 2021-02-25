@@ -1,0 +1,7 @@
+xcassets:
+  inputs:
+    - StackOverflow-Search/Resources/Assets.xcassets
+    - StackOverflow-Search/Resources/Colors.xcassets
+  outputs:
+    templateName: swift4
+    output: StackOverflow-Search/Misc/Generated/Assets.swift

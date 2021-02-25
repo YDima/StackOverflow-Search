@@ -30,11 +30,5 @@ class ViewController: UIViewController {
         print(response?.items[0].description)
       }
     }
-    
-    
-    
   }
-
-
 }
-

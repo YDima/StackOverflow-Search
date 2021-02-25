@@ -62,5 +62,3 @@ extension QuestionAPIEndPoint: EndPointType {
     return nil
   }
 }
-
-

@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (5.4.1)
+  - KeyboardAvoidingView (5.0.1):
+    - ViewState (>= 1.0.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
+  - SwiftGen (6.4.0)
+  - SwiftLint (0.42.0)
+  - SwiftMessages (9.0.0):
+    - SwiftMessages/App (= 9.0.0)
+  - SwiftMessages/App (9.0.0)
+  - ViewState (1.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - KeyboardAvoidingView (~> 5.0)
+  - NVActivityIndicatorView
+  - SDWebImage
+  - SwiftGen
+  - SwiftLint
+  - SwiftMessages
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - KeyboardAvoidingView
+    - NVActivityIndicatorView
+    - SDWebImage
+    - SwiftGen
+    - SwiftLint
+    - SwiftMessages
+    - ViewState
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  KeyboardAvoidingView: ef26d0d7e55ae412e9ef6e02ba84e7540af0ce4e
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
+  SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
+  SwiftMessages: 55274ca3a239062398603008ed81924cfd1fe798
+  ViewState: 78aa77483e74e592c22e841619b853bc686843be
+
+PODFILE CHECKSUM: 8fe681d0a59f01f01ae462bd80e6e0b4b22cbfa9
+
+COCOAPODS: 1.10.1

@@ -7,8 +7,8 @@
 
 import Foundation
 struct Owner: Codable {
-  private(set) var nickname: String
-  private(set) var profileImageURL: String
+  private(set) var nickname: String?
+  private(set) var profileImageURL: String?
   
   private enum CodingKeys: String, CodingKey {
     case nickname = "display_name"

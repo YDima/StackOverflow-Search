@@ -29,7 +29,6 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
   
 }
 
-
 fileprivate extension Router {
   func buildRequest(from route: EndPoint) throws -> URLRequest {
     
@@ -46,11 +45,13 @@ fileprivate extension Router {
         request.setValue("aplication/json", forHTTPHeaderField: "Content-Type")
         
       case .requestParameters(let bodyParameters, let bodyEncoding, let urlParameters):
-        try self.configureParameters(bodyParameters, bodyEncoding, urlParameters, &request)
+        try self.configureParameters(bodyParameters: bodyParameters, bodyEncoding: bodyEncoding,
+                                     urlParameters: urlParameters, request: &request)
         
       case .requestParametersAndHeaders(let bodyParameters, let bodyEncoding, let urlParameters, let additionalHeaders):
         self.additionalHeaders(additionalHeaders, &request)
-        try self.configureParameters(bodyParameters, bodyEncoding, urlParameters, &request)
+        try self.configureParameters(bodyParameters: bodyParameters, bodyEncoding: bodyEncoding,
+                                     urlParameters: urlParameters, request: &request)
       }
       
       return request
@@ -61,7 +62,10 @@ fileprivate extension Router {
     
   }
   
-  func configureParameters(_ bodyParameters: Parameters?, _ bodyEncoding: ParameterEncoding,  _ urlParameters: Parameters?, _ request: inout URLRequest) throws {
+  func configureParameters(bodyParameters: Parameters?,
+                           bodyEncoding: ParameterEncoding,
+                           urlParameters: Parameters?,
+                           request: inout URLRequest) throws {
     do {
       try bodyEncoding.encode(urlRequest: &request, bodyParameters: bodyParameters, urlParameters: urlParameters)
       
@@ -75,8 +79,5 @@ fileprivate extension Router {
       for (key, value) in headers {
         request.setValue(value, forHTTPHeaderField: key)
       }
-    
   }
-  
-  
 }

@@ -24,8 +24,5 @@ struct URLParameterEncoder: ParameterEncoder {
     if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
       urlRequest.addValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
     }
-    
   }
-  
-  
 }

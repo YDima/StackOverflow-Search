@@ -35,7 +35,6 @@ struct DefaultNetworkManager: NetworkManager {
           guard let data = data else {
             completion(nil, NetworkResponse.noData.rawValue)
             return
-            
           }
           
           print(data)
@@ -45,7 +44,6 @@ struct DefaultNetworkManager: NetworkManager {
           } catch {
             completion(nil, NetworkResponse.unableToDecode.rawValue)
           }
-          
           
         case .failure(let error):
           completion(nil, error)
@@ -82,7 +80,6 @@ struct DefaultNetworkManager: NetworkManager {
             completion(nil, NetworkResponse.unableToDecode.rawValue)
           }
           
-          
         case .failure(let error):
           completion(nil, error)
         }
@@ -91,9 +88,8 @@ struct DefaultNetworkManager: NetworkManager {
   }
 }
 
-
 fileprivate extension DefaultNetworkManager {
-  func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
+  func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String> {
     switch response.statusCode {
     case 200...299: return .success
     case 401...500: return .failure(NetworkResponse.authenticationError.rawValue)

@@ -24,7 +24,6 @@ struct Answer: Codable {
   private(set) var numberOfVotes: Int
   private(set) var owner: Owner
   
-  
   private enum CodingKeys: String, CodingKey {
     
     case title

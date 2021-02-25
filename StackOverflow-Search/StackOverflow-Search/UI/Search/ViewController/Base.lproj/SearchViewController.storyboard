@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SearchViewController" customModule="StackOverflow_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="KeyboardAvoidingView" customModule="KeyboardAvoidingView">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Вакансии Android Developer" backgroundImage="nil" translatesAutoresizingMaskIntoConstraints="NO" id="tuc-5f-CUd">
+                                <rect key="frame" x="0.0" y="416" width="428" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="haT-fd-JgW"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iNd-3i-xeg"/>
+                                </connections>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="751" verticalCompressionResistancePriority="200" image="logo-stackoverflow" translatesAutoresizingMaskIntoConstraints="NO" id="fyq-Dj-iG3">
+                                <rect key="frame" x="20" y="44" width="388" height="372"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="1" sectionFooterHeight="44" estimatedSectionFooterHeight="44" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcH-F3-p0c">
+                                <rect key="frame" x="0.0" y="472" width="428" height="454"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3sr-Sa-2yd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JcH-F3-p0c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BAh-1t-9KF"/>
+                            <constraint firstItem="JcH-F3-p0c" firstAttribute="top" secondItem="tuc-5f-CUd" secondAttribute="bottom" id="Bxi-lr-2Qg"/>
+                            <constraint firstItem="tuc-5f-CUd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GtL-SN-JdU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JcH-F3-p0c" secondAttribute="trailing" id="Ox5-VL-GdW"/>
+                            <constraint firstItem="fyq-Dj-iG3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="S6F-d3-R6W"/>
+                            <constraint firstItem="tuc-5f-CUd" firstAttribute="top" secondItem="fyq-Dj-iG3" secondAttribute="bottom" id="WjQ-4S-TmC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fyq-Dj-iG3" secondAttribute="trailing" constant="20" id="Y27-oF-fnN"/>
+                            <constraint firstAttribute="bottom" secondItem="JcH-F3-p0c" secondAttribute="bottom" id="gcW-eB-NoY"/>
+                            <constraint firstItem="tuc-5f-CUd" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" priority="700" id="iF7-3Z-rCr"/>
+                            <constraint firstItem="fyq-Dj-iG3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lti-vQ-IQV"/>
+                            <constraint firstItem="tuc-5f-CUd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="200" id="qZb-na-L3X"/>
+                            <constraint firstAttribute="trailing" secondItem="tuc-5f-CUd" secondAttribute="trailing" id="u0R-qj-HUI"/>
+                            <constraint firstItem="fyq-Dj-iG3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yBP-Jg-6xS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centerConstraint" destination="iF7-3Z-rCr" id="Exf-pY-QiV"/>
+                        <outlet property="searchBar" destination="tuc-5f-CUd" id="zop-Xw-L8R"/>
+                        <outlet property="tableView" destination="JcH-F3-p0c" id="Qa6-lf-d91"/>
+                        <outlet property="topConstraint" destination="qZb-na-L3X" id="3jG-M5-SsM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="84.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo-stackoverflow" width="1866" height="372"/>
+        <image name="nil" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
