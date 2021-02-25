@@ -17,6 +17,8 @@
 		4B26716A25E7F84E00D2A98E /* Nib+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26716925E7F84E00D2A98E /* Nib+Instantiate.swift */; };
 		4B26716D25E7FF0A00D2A98E /* String+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26716C25E7FF0A00D2A98E /* String+Decoding.swift */; };
 		4B26717025E800F800D2A98E /* ErrorDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26716F25E800F800D2A98E /* ErrorDisplaying.swift */; };
+		4B26717825E8087D00D2A98E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26717725E8087D00D2A98E /* StringExtension.swift */; };
+		4B26717E25E8091900D2A98E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26717D25E8091900D2A98E /* Parser.swift */; };
 		4B5E8D0D25E6DF7000F19B97 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B5E8D0C25E6DF7000F19B97 /* Colors.xcassets */; };
 		4B5E8D1325E6DFF700F19B97 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E8D1225E6DFF700F19B97 /* Assets.swift */; };
 		4B5E8D3425E7021200F19B97 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E8D3325E7021200F19B97 /* DetailsViewController.swift */; };
@@ -65,6 +67,8 @@
 		4B26716925E7F84E00D2A98E /* Nib+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nib+Instantiate.swift"; sourceTree = "<group>"; };
 		4B26716C25E7FF0A00D2A98E /* String+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Decoding.swift"; sourceTree = "<group>"; };
 		4B26716F25E800F800D2A98E /* ErrorDisplaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplaying.swift; sourceTree = "<group>"; };
+		4B26717725E8087D00D2A98E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		4B26717D25E8091900D2A98E /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		4B5E8D0C25E6DF7000F19B97 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4B5E8D1225E6DFF700F19B97 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		4B5E8D3325E7021200F19B97 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +133,14 @@
 			path = Footer;
 			sourceTree = "<group>";
 		};
+		4B26717625E8086C00D2A98E /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				4B26717D25E8091900D2A98E /* Parser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
 		4B5E8D0625E6AC6E00F19B97 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +153,7 @@
 		4B5E8D0A25E6DF4700F19B97 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				4B26717625E8086C00D2A98E /* Parser */,
 				4B5E8D5925E708A900F19B97 /* Protocols */,
 				4B5E8D5125E7082F00F19B97 /* Extentions */,
 				4B5E8D1125E6DFE700F19B97 /* Generated */,
@@ -206,6 +219,7 @@
 				4B26716025E7ECA900D2A98E /* Int+TimeString.swift */,
 				4B26716925E7F84E00D2A98E /* Nib+Instantiate.swift */,
 				4B26716C25E7FF0A00D2A98E /* String+Decoding.swift */,
+				4B26717725E8087D00D2A98E /* StringExtension.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -528,8 +542,10 @@
 				E5A64FCA25E6D07B009A61A0 /* NetworkRouter.swift in Sources */,
 				E5A64FB625E67D49009A61A0 /* HTTPMethod.swift in Sources */,
 				E5FD83FF25E403980072C2A1 /* AppDelegate.swift in Sources */,
+				4B26717E25E8091900D2A98E /* Parser.swift in Sources */,
 				E5A64FC125E68088009A61A0 /* NetworkError.swift in Sources */,
 				E5A64FDD25E6EB31009A61A0 /* DefaultNetworkManager.swift in Sources */,
+				4B26717825E8087D00D2A98E /* StringExtension.swift in Sources */,
 				E5A64FB225E67CC4009A61A0 /* EndPointType.swift in Sources */,
 				E5A64FE725E70A7C009A61A0 /* Owner.swift in Sources */,
 				4B26716A25E7F84E00D2A98E /* Nib+Instantiate.swift in Sources */,

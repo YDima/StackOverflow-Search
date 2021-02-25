@@ -24,7 +24,7 @@ class SearchCell: UITableViewCell, ReusableCell, ConfigurableCell {
         questionLabel.text = data?.title?.decoded
         answeredImageView.image = data?.isAnswered == true ? Asset.Assets.trueIcon.image: Asset.Assets.falseIcon.image
         avatarImageView.url = data?.owner?.profileImageURL
-        nameLabel.text = data?.owner?.nickname
+        nameLabel.text = data?.owner?.nickname?.decoded
         dateLabel.text = data?.date?.timeString
     }
 }
