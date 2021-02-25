@@ -113,9 +113,9 @@ extension SearchViewController: UITableViewDelegate {
         let height = scrollView.frame.height
         let contentSizeHeight = scrollView.contentSize.height
         let offset = scrollView.contentOffset.y
-        let reachedBottom = (offset + height == contentSizeHeight)
+        let reachingBottom = (offset + height + .searchTreshold >= contentSizeHeight)
         
-        if reachedBottom {
+        if reachingBottom {
             loadMoreQuestions()
         }
     }
@@ -164,5 +164,6 @@ private extension TimeInterval {
 }
 
 private extension CGFloat {
+    static var searchTreshold: CGFloat { return 200 }
     static var footerHeight: CGFloat { return 44 }
 }
