@@ -38,4 +38,9 @@ class SearchDatasource<Cell: UITableViewCell & ReusableCell & ConfigurableCell>:
         }
         return indexes
     }
+    
+    func item(at index: IndexPath) -> Cell.Item? {
+        guard items.indices.contains(index.row) else { return nil }
+        return items[index.row]
+    }
 }

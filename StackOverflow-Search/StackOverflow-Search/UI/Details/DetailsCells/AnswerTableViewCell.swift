@@ -14,6 +14,7 @@ class AnswerTableViewCell: UITableViewCell, ReusableCell, ConfigurableCell {
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var avatarImageView: UIImageView!
     @IBOutlet private weak var trueAnswerImageView: UIImageView!
+    @IBOutlet private weak var scoreLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,7 +27,12 @@ class AnswerTableViewCell: UITableViewCell, ReusableCell, ConfigurableCell {
         // Configure the view for the selected state
     }
     
-    func configure(with data: Question?) {
+    func configure(with data: Answer?) {
+        textAnswerTable?.attributedText = data?.description.htmlAttributedString()
+        nameLabel.text = data?.owner.nickname?.decoded
+        avatarImageView.url = data?.owner.profileImageURL
+        trueAnswerImageView.image = data?.isAccepted == true ? Asset.Assets.trueIcon.image: nil
+        scoreLabel.text = "\(data?.numberOfVotes ?? 0 )"
         
     }
 }

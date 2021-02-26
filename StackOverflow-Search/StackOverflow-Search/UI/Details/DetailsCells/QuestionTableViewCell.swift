@@ -8,7 +8,13 @@
 import UIKit
 
 class QuestionTableViewCell: UITableViewCell, ReusableCell, ConfigurableCell {
-
+    @IBOutlet private weak var questionTitleLabel: UILabel!
+    @IBOutlet private weak var answeredImageView: UIImageView!
+    @IBOutlet private weak var questionLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var avatarImageView: UIImageView!
+    @IBOutlet private weak var dateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,7 +27,12 @@ class QuestionTableViewCell: UITableViewCell, ReusableCell, ConfigurableCell {
     }
     
     func configure(with data: Question?) {
-        
+        questionTitleLabel.text = data?.title?.decoded
+        questionLabel.text = data?.body?.decoded
+        answeredImageView.image = data?.isAnswered == true ? Asset.Assets.trueIcon.image: Asset.Assets.falseIcon.image
+        avatarImageView.url = data?.owner?.profileImageURL
+        nameLabel.text = data?.owner?.nickname?.decoded
+        dateLabel.text = data?.date?.timeString
     }
     
 }

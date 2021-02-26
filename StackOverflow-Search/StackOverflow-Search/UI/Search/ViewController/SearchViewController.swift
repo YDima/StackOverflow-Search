@@ -121,7 +121,13 @@ extension SearchViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: navigate to details
+        guard let question = datasource.item(at: indexPath) else { return }
+        let storyboard = UIStoryboard(name: String(describing: DetailsViewController.self), bundle: nil)
+        guard let vc: DetailsViewController = storyboard.get() else { return }
+        if let question = question { // IDK why compiler forced me to unwrap again
+            vc.set(question: question)
+        }
+        present(vc, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
