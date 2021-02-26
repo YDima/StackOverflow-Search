@@ -38,7 +38,6 @@ extension QuestionAPIEndPoint: EndPointType {
   
   var task: HTTPTask {
     switch self {
-    #warning("TODO: make Constants struct or extension for url params")
     case .search(let question, let page):
       return .requestParameters(bodyParameters: nil,
                                 bodyEncoding: .urlEncoding,

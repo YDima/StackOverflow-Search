@@ -10,15 +10,14 @@ import Foundation
 protocol NetworkManager {
   associatedtype EndPoint: EndPointType
   var router: Router<EndPoint> { get }
-  #warning("TODO: make errors Error type against String")
-  func search(question: String, page: Int, completion: @escaping (_ APIdata: APIResponse<Question>?, _ error: String?) -> ())
-  func fetchAnswers(for questionID: Int, page: Int, completion: @escaping (_ APIData: APIResponse<Answer>?, _ error: String?) -> ())
+  func search(question: String, page: Int, completion: @escaping (_ APIdata: APIResponse<Question>?, _ error: String?) -> Void)
+  func fetchAnswers(for questionID: Int, page: Int, completion: @escaping (_ APIData: APIResponse<Answer>?, _ error: String?) -> Void)
 }
 
 struct DefaultNetworkManager: NetworkManager {
   let router = Router<QuestionAPIEndPoint>()
   
-  func search(question: String, page: Int, completion: @escaping (_ APIdata: APIResponse<Question>?, _ error: String?) -> ()) {
+  func search(question: String, page: Int, completion: @escaping (_ APIdata: APIResponse<Question>?, _ error: String?) -> Void) {
     
     router.request(.search(question: question, page: page)) { (data, response, error) in
       
@@ -53,7 +52,7 @@ struct DefaultNetworkManager: NetworkManager {
     
   }
   
-  func fetchAnswers(for questionID: Int, page: Int, completion: @escaping (APIResponse<Answer>?, String?) -> ()) {
+  func fetchAnswers(for questionID: Int, page: Int, completion: @escaping (APIResponse<Answer>?, String?) -> Void) {
     router.request(.fetchAnswers(questionID: questionID, page: page)) { (data, response, error) in
       
       guard error == nil else {

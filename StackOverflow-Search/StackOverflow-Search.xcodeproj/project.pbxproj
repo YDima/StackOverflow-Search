@@ -155,6 +155,8 @@
 		4B5E8D0A25E6DF4700F19B97 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				E5FD83FE25E403980072C2A1 /* AppDelegate.swift */,
+				E5FD840025E403980072C2A1 /* SceneDelegate.swift */,
 				4B26717625E8086C00D2A98E /* Parser */,
 				4B5E8D5925E708A900F19B97 /* Protocols */,
 				4B5E8D5125E7082F00F19B97 /* Extentions */,
@@ -366,8 +368,6 @@
 				E5A64FD125E6D8FF009A61A0 /* Model */,
 				E5A64FAD25E67C6D009A61A0 /* Networking */,
 				4B5E8D0625E6AC6E00F19B97 /* UI */,
-				E5FD83FE25E403980072C2A1 /* AppDelegate.swift */,
-				E5FD840025E403980072C2A1 /* SceneDelegate.swift */,
 				4B5E8D0A25E6DF4700F19B97 /* Misc */,
 				4B5E8D0B25E6DF5D00F19B97 /* Resources */,
 				E5FD840C25E4039A0072C2A1 /* LaunchScreen.storyboard */,

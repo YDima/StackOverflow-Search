@@ -10,6 +10,6 @@ import Foundation
 protocol NetworkRouter: class {
   associatedtype EndPoint: EndPointType
   
-  func request(_ route: EndPoint, completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> ())
+  func request(_ route: EndPoint, completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void)
   func cancell()
 }

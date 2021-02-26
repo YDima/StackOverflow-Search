@@ -10,7 +10,7 @@ import Foundation
 class Router<EndPoint: EndPointType>: NetworkRouter {
   private var task: URLSessionTask?
   
-  func request(_ route: EndPoint, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+  func request(_ route: EndPoint, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
     
     do {
       let request = try self.buildRequest(from: route)

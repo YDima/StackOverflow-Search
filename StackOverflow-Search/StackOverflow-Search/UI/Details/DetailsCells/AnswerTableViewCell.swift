@@ -15,6 +15,7 @@ class AnswerTableViewCell: UITableViewCell, ReusableCell, ConfigurableCell {
     @IBOutlet private weak var avatarImageView: UIImageView!
     @IBOutlet private weak var trueAnswerImageView: UIImageView!
     @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private weak var view: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,11 +29,12 @@ class AnswerTableViewCell: UITableViewCell, ReusableCell, ConfigurableCell {
     }
     
     func configure(with data: Answer?) {
-        textAnswerTable?.attributedText = data?.description.htmlAttributedString()
-        nameLabel.text = data?.owner.nickname?.decoded
-        avatarImageView.url = data?.owner.profileImageURL
+        textAnswerTable?.attributedText = data?.description?.htmlAttributedString()
+        nameLabel.text = data?.owner?.nickname?.decoded
+        avatarImageView.url = data?.owner?.profileImageURL
         trueAnswerImageView.image = data?.isAccepted == true ? Asset.Assets.trueIcon.image: nil
         scoreLabel.text = "\(data?.numberOfVotes ?? 0 )"
-        
+        view.backgroundColor? = data?.isAccepted == false ? .clear : UIColor.green.withAlphaComponent(0.15)
+        dateLabel.text = data?.date?.timeString
     }
 }

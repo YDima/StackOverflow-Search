@@ -28,7 +28,7 @@ class QuestionTableViewCell: UITableViewCell, ReusableCell, ConfigurableCell {
     
     func configure(with data: Question?) {
         questionTitleLabel.text = data?.title?.decoded
-        questionLabel.text = data?.body?.decoded
+        questionLabel.attributedText = data?.body?.htmlAttributedString()
         answeredImageView.image = data?.isAnswered == true ? Asset.Assets.trueIcon.image: Asset.Assets.falseIcon.image
         avatarImageView.url = data?.owner?.profileImageURL
         nameLabel.text = data?.owner?.nickname?.decoded

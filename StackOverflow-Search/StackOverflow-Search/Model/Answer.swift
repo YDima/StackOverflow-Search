@@ -17,12 +17,12 @@ import Foundation
 */
 
 struct Answer: Codable {
-  private(set) var title: String
-  private(set) var description: String
-  private(set) var date: Int
-  private(set) var isAccepted: Bool
-  private(set) var numberOfVotes: Int
-  private(set) var owner: Owner
+  private(set) var title: String?
+  private(set) var description: String?
+  private(set) var date: Int?
+  private(set) var isAccepted: Bool?
+  private(set) var numberOfVotes: Int?
+  private(set) var owner: Owner?
   
   private enum CodingKeys: String, CodingKey {
     
