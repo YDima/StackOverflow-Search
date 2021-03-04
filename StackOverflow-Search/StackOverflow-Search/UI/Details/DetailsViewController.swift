@@ -48,6 +48,12 @@ class DetailsViewController: UIViewController, ErrorDisplaying {
     
     // MARK: - Private
     
+    /*
+     Try to find more than 1 difference between this method and the `loadMoreQuestions` method
+     from the SearchViewController. This code shouldn't be copypasted, it's an error. You should move
+     such code to an abstraction, using class composition is more preferrable in such cases, but inheritance
+     will be ok aswell.
+     */
     private func loadMoreAnswers() {
         guard !isLoadingMore else { return }
         guard canLoadMore else { return }
