@@ -17,6 +17,9 @@ protocol NetworkManager {
 struct DefaultNetworkManager: NetworkManager {
   let router = Router<QuestionAPIEndPoint>()
   
+  /**
+   It's better to use `Result<Question, Error>` for these type of completion handlers.
+   */
   func search(question: String, page: Int, completion: @escaping (_ APIdata: APIResponse<Question>?, _ error: String?) -> Void) {
     
     router.request(.search(question: question, page: page)) { (data, response, error) in

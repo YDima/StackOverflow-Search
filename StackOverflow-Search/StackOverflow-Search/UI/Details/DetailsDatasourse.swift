@@ -32,6 +32,9 @@ class DetailsDatasourse: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /*
+         if/else is ok, but try to use switch/case construction for enums.
+         */
         if Section(rawValue: indexPath.section) == .question {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.reuseIdentifier,
                                                            for: indexPath) as? QuestionTableViewCell else {
@@ -47,6 +50,10 @@ class DetailsDatasourse: NSObject, UITableViewDataSource {
             cell.configure(with: items[indexPath.row])
             return cell
         }
+        /*
+         Not an error, but returning a newly created cell instance will crash the app. It's ok to instead fatalError or force
+         unwrap cell type cast in such cases.
+         */
         return UITableViewCell()
     }
     

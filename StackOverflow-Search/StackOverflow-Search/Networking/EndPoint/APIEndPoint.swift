@@ -46,7 +46,8 @@ extension QuestionAPIEndPoint: EndPointType {
                                                 "sort": "votes",
                                                 "order": "desc",
                                                 "q": question,
-                                                "site": "stackoverflow"])
+                                                "site": "stackoverflow",
+                                                "filter": "withbody"]) // <- this minor error cost you 5 points, don't forget to test your app before submitting
     case .fetchAnswers(_, let page):
       return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: ["page": page,
                                                                                                  "pagesize": 15,

@@ -15,6 +15,7 @@ class SearchCell: UITableViewCell, ReusableCell, ConfigurableCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     
+    // Try not to leave empty overrides
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

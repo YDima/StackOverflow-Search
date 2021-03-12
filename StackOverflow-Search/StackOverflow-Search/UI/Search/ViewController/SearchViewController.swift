@@ -41,7 +41,6 @@ class SearchViewController: UIViewController, ErrorDisplaying {
         tableView.register(SearchCell.self)
         tableView.dataSource = datasource
         searchBar.backgroundImage = UIImage()
-        tableView.estimatedRowHeight = UITableView.automaticDimension
     }
     
     // MARK: - Private
@@ -71,7 +70,17 @@ class SearchViewController: UIViewController, ErrorDisplaying {
         page += 1
         networkService.search(question: searchBar.text ?? "", page: self.page, completion: { [weak self] (questions, error) in
             DispatchQueue.main.async {
-                self?.isLoadingMore = false
+                /*
+                 There is a duplicate load of questions, this adds some lags to scroll.
+                 `self?.isLoadingMore = false`
+                 is called before
+                 `self?.tableView.insertRows(at: indexes, with: .none)`
+                 and the latter expression causes your scrollview to "scroll", which causes another fetch
+                 because the bool flag (`isLoadingMore`) is set to false.
+                 
+                 Feel free to contact me for a more detailed explanation if necessary.
+                 */
+                defer { self?.isLoadingMore = false }
                 if let error = error {
                     self?.page -= 1
                     self?.show(errorString: error)
@@ -108,6 +117,13 @@ extension SearchViewController: UISearchBarDelegate {
 }
 
 extension SearchViewController: UITableViewDelegate {
+    /*
+     Add this estimate to reduce lag. Combined with the bug with duplicate fetch this dramatically improves the performance.
+     */
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        130
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         searchBar.resignFirstResponder()
         let height = scrollView.frame.height
@@ -124,6 +140,14 @@ extension SearchViewController: UITableViewDelegate {
         guard let question = datasource.item(at: indexPath) else { return }
         let storyboard = UIStoryboard(name: String(describing: DetailsViewController.self), bundle: nil)
         guard let vc: DetailsViewController = storyboard.get() else { return }
+        
+        /*
+         > IDK why compiler forced me to unwrap again
+         
+         The answer is simple, take a look at `SearchCell`, line 23. You define the associated type declared by
+         `ConfigurableCell` as an optional type (`func configure(with data: Question?)`). So when you
+         return an optional instance of this type you get a double optional 🙂.
+         */
         if let question = question { // IDK why compiler forced me to unwrap again
             vc.set(question: question)
         }
@@ -170,6 +194,7 @@ private extension TimeInterval {
 }
 
 private extension CGFloat {
-    static var searchTreshold: CGFloat { return 200 }
+    // feels smoother if prefetched earlier
+    static var searchTreshold: CGFloat { return 300 }
     static var footerHeight: CGFloat { return 44 }
 }
